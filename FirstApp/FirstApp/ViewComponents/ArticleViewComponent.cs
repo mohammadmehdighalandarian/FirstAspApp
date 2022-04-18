@@ -10,10 +10,10 @@ namespace FirstApp.ViewComponents
             var Articles = new List<Articles>()
             {
                 new Articles(1, "مقاله1", "this is for my new ksajdasd", "blog-post-thumb-1.jpg"),
-                new Articles(1, "مقاله1", "this is for my new ksajdasd", "blog-post-thumb-1.jpg"),
-                new Articles(1, "مقاله1", "this is for my new ksajdasd", "blog-post-thumb-1.jpg"),
+                new Articles(1, "مقاله1", "this is for my new ksajdasd", "blog-post-thumb-2.jpg"),
+                new Articles(1, "مقاله1", "this is for my new ksajdasd", "blog-post-thumb-3.jpg"),
             };
-            return View()
+            return View("Article", Articles);
         }
     }
 }
