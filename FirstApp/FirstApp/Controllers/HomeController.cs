@@ -17,10 +17,17 @@ namespace FirstApp.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult ContactUs()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult ContactUs(SendMessage Form)
+        {
+            var name=Form.Name;
+            return Json(Ok());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
