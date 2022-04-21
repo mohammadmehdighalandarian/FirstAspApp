@@ -34,6 +34,12 @@ namespace FirstApp.Controllers
         [HttpPost]
         public IActionResult ContactUs(SendMessage Form)
         {
+            #region SendToGmail
+
+            SendMessageToGmail sendMessageto = new SendMessageToGmail(Form.Email,Form.Status,Form.Message,Form.Name);
+            
+
+            #endregion
             Form.servises = new SelectList(_servises, "Id", "Name");
             if (!ModelState.IsValid)
             {
